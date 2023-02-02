@@ -40,6 +40,7 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
           ref: my-first-branch # Important, as normally `pull_request` event won't grab other branches
+        run: hello, world!
 
       # Update README to close <details id=3> and open <details id=4>
       # and set STEP to '4'
