@@ -1,0 +1,21 @@
+name: Add To GitHub projects
+
+on:
+  pull_request:
+    types:
+      - opened
+      
+jobs: 
+    add-to-project:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/add-to-project@v0.4.0
+          with:
+            # URL of the project to add issues to
+            project-url: https://github.com/users/sjfjawe/projects/1
+            # A GitHub personal access token with write access to the project
+            github-token: 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
+            # A comma-separated list of labels to use as a filter for issue to be added
+            labeled: T2
+            # The behavior of the labels filter, AND to match all labels, OR to match any label, NOT to exclude any listed label (default is OR)
+            #label-operator: # optional
