@@ -40,7 +40,8 @@ jobs:
         with:
           fetch-depth: 0 # Let's get all the branches
           ref: my-first-branch # Important, as normally `pull_request` event won't grab other branches
-        run: hello, world!
+      - name: world-test1
+        run: echo hello, world-one!
 
       # Update README to close <details id=3> and open <details id=4>
       # and set STEP to '4'
@@ -51,3 +52,5 @@ jobs:
           from_step: 3
           to_step: 4
           branch_name: my-first-branch
+      - name: world-test2
+        run: echo hello, world-two!
