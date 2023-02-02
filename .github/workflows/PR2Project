@@ -1,0 +1,17 @@
+name: Add PR to project
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@RELEASE_VERSION
+        with:
+          project-url: https://github.com/users/sjfjawe/projects/1
+          github-token: ${{ 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 }}
+          labeled: T2
