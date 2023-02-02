@@ -37,6 +37,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Let's get all the branches
+      - name: world1
+        run: echo hello, world11!
 
       # Update README to close <details id=4> and open <details id=X>
       # and set STEP to X
@@ -47,3 +49,5 @@ jobs:
           from_step: 4
           to_step: X
           branch_name: my-first-branch
+      - name: world2
+        run: echo hello, world22!
