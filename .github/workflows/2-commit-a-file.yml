@@ -37,6 +37,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Let's get all the branches
+      - name: hw1
+        run: echo hw1
 
       # Update README to close <details id=2> and open <details id=3>
       # and set STEP to '3'
@@ -47,3 +49,5 @@ jobs:
           from_step: 2
           to_step: 3
           branch_name: my-first-branch
+      - name: hw2
+        run: echo hw2
